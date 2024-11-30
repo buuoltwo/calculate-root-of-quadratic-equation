@@ -19,13 +19,12 @@ public class Solution {
         double sqrt = Math.sqrt(b * b - 4 * a * c);
         double x1 = ((-1) * b + sqrt) / (2 * a);
         double x2 = ((-1) * b - sqrt) / (2 * a);
-        if (Double.isNaN(x1) || Double.isNaN(x2)) {
+        if (Double.isNaN(x1) || Double.isNaN((x2))) {
             return new double[]{};
         }
         if (Math.abs(x1 - x2) < 1e-5) {
             return new double[]{x1};
         }
         return new double[]{x1, x2};
-
     }
 }
